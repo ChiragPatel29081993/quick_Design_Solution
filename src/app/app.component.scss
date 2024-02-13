@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  .countdown {
+    font-size: 2em;
+    color: #777;
+  }
