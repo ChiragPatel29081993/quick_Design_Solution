@@ -19,43 +19,27 @@
     </div>
     <app-about-us></app-about-us>
   </div>
+  <div class="mb-3" style="background-color: white;">
+    <div class="top-border-wrapper d-flex">
+      <div class="w-20 first-part"></div>
+      <div class="w-20 secound-part"></div>
+      <div class="w-20 third-part"></div>
+      <div class="w-20 fourth-part"></div>
+      <div class="w-20 fiveth-part"></div>
+    </div>
+    <app-payment-info></app-payment-info>
+  </div>
+  <div class="mb-3" style="background-color: white;">
+    <div class="top-border-wrapper d-flex">
+      <div class="w-20 first-part"></div>
+      <div class="w-20 secound-part"></div>
+      <div class="w-20 third-part"></div>
+      <div class="w-20 fourth-part"></div>
+      <div class="w-20 fiveth-part"></div>
+    </div>
+    <app-gallery></app-gallery>
+  </div>
 </div>
-<div class="footer-part f-14" style="height: 63px;">
+<div class="footer-part f-14" style="height: 48px;">
   <app-footer></app-footer>
 </div>
-
-<div class="container" *ngIf="false">
-  <h1>Coming Soon</h1>
-  <p>We are working hard to bring you something amazing. Stay tuned!</p>
-  <div class="countdown" id="countdown"></div>
-</div>
-
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Feb 28, 2024 00:00:00").getTime();
-
-  // Update the countdown every 1 second
-  var x = setInterval(function () {
-    // Get the current date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the countdown date
-    var distance = countDownDate - now;
-
-    // Calculate days, hours, minutes, and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the countdown
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-
-    // If the countdown is over, display a message
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-  }, 1000);
-</script>

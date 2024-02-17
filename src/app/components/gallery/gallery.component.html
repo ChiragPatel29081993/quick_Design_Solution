@@ -1,1 +1,61 @@
-<p>gallery works!</p>
+<div class="gallery-container p-3" id="gallery-tab">
+    <div class="title-wrapper py-2 mb-3">
+        <h3 class="gallery-title">GALLERY</h3>
+    </div>
+    <div class="gallery-info-section">
+        <div class="images-container">
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1694746592748.jpg', 'Image 1')" alt="Image 1"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1694746592748.jpg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1695295922078.jpeg', 'Image 2')" alt="Image 2"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1695295922078.jpeg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1695296005909.jpg', 'Image 3')" alt="Image 3"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1695296005909.jpg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681985352.jpg', 'Image 4')" alt="Image 4"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681985352.jpg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681990661.jpg', 'Image 5')" alt="Image 5"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681990661.jpg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681995329.jpeg', 'Image 6')" alt="Image 6"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696681995329.jpeg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682005167.jpg', 'Image 7')" alt="Image 7"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682005167.jpg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682010983.jpeg', 'Image 8')" alt="Image 8"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682010983.jpeg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682015414.jpeg', 'Image 9')" alt="Image 9"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682015414.jpeg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682018702.jpeg', 'Image 10')" alt="Image 10"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682018702.jpeg" style="width:100%">
+            </div>
+            <div class="image-wrapper p-1">
+                <img (click)="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682144064.jpg', 'Image 11')" alt="Image 11"
+                    src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A7/6271/1696682144064.jpg" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="isModalOpen" id="imageModal" class="modal img-model" [ngClass]="{'d-block': isModalOpen}">
+    <span class="close" (click)="closeImageModal()">×</span>
+    <img class="modal-content fadeIn" id="img01" [src]="modalImageUrl">
+    <div id="caption">{{ modalImageCaption }}</div>
+</div>
