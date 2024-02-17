@@ -6,3 +6,10 @@
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    // background-image: url(https://mycrd.in/templates/template3/bgwood.jpg);
+  }
