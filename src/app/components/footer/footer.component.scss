@@ -1,0 +1,28 @@
+.footer-container {
+    overflow: auto;
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+    width: 100%;
+    .footer-menu-icon {
+        font-size: 24px;
+    }
+    .fa-home {
+        color: #f2911d;
+    }
+    .fa-briefcase {
+        color: #039ed7;
+    }
+    .fa-box-open {
+        color: #4FAF61;
+    }
+    .fa-money-bill-alt {
+        color: #E1408F;
+    }
+    .fa-file-image {
+        color: #e04c1e;
+    }
+    .fa-share{
+        color: #3b19cd;
+    }
+}

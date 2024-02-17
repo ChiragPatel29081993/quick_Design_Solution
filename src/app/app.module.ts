@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminProfileComponent,
+    AboutUsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
