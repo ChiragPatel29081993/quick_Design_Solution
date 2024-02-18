@@ -53,7 +53,37 @@ export class AdminProfileComponent implements OnInit {
   }
 
   openWeb() {
-    const uri = `https://quickdesignsolution.netlify.app/`;
+    const uri = `https://www.instagram.com/quick_design_solution/?igsh=YzljYTk1ODg3Zg%3D%3D`;
     window.open(uri, '_blank');
+  }
+
+  contactInfo = {
+    name: 'Chirag Patel',
+    phoneNumber: '+9181402 02725',
+    email: 'quickdesignsolution@gmail.com',
+    address: 'C-13, Shivsagar Socity, Vastral Road Vastral, Ahmedabad-382418'
+  };
+
+  downloadVCard() {
+    const vCardData = `
+      BEGIN:VCARD
+      VERSION:3.0
+      N:${this.contactInfo.name}
+      FN:${this.contactInfo.name}
+      TEL:${this.contactInfo.phoneNumber}
+      EMAIL:${this.contactInfo.email}
+      ADR:${this.contactInfo.address}
+      END:VCARD
+    `;
+
+    const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'contact.vcf';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
   }
 }

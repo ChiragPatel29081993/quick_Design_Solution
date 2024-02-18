@@ -19,10 +19,10 @@
                     crossorigin="anonymous">
             </div>
             <div class="shadow-buttons">
-                <a class="shadow-button" data-title="Steps Design Studio" id="share-button"><i
-                        class="fas fa-share-alt shadow-button-icon"></i>Share</a>
-                <a class="shadow-button" id="save-qr-button" data-title="Steps Design Studio">
-                    <i class="fas fa-download shadow-button-icon"></i>
+                <a class="shadow-button" data-title="Steps Design Studio" id="share-button" (click)="shareImage()"><i
+                        class="fas fa-share-alt shadow-button-icon mr-2"></i>Share</a>
+                <a class="shadow-button" id="save-qr-button" data-title="Steps Design Studio" (click)="downloadImage()">
+                    <i class="fas fa-download shadow-button-icon mr-2"></i>
                     Save QR
                 </a>
             </div>

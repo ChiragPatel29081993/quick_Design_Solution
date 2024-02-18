@@ -44,6 +44,31 @@ export class ShareComponent implements OnInit {
     }, 3000);
   }
 
+  shareImage() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Share QR Code',
+            text: 'Scan below QR to open profile:',
+            url: '../../../assets/img/web_qr.jpg'
+        }).then(() => {
+            console.log('Shared successfully');
+        }).catch((error) => {
+            console.error('Error sharing:', error);
+        });
+    } else {
+        console.error('Web Share API is not supported in this browser');
+    }
+}
+
+downloadImage() {
+  const a = document.createElement('a');
+  a.href = '../../../assets/img/web_qr.jpg';
+  a.download = 'qr_code.jpg';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
   // ngAfterViewInit() {
   //   intlTelInput(this.telInput.nativeElement, {
   //     initialCountry: 'auto',
