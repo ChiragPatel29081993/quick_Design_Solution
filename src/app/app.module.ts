@@ -17,7 +17,7 @@ import { ShareComponent } from './components/share/share.component';
     FooterComponent,
     PaymentInfoComponent,
     GalleryComponent,
-    ShareComponent
+    ShareComponent,
   ],
   imports: [
     BrowserModule,
